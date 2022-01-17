@@ -2,7 +2,6 @@ namespace Binance.Common
 {
     using System.Net.Http;
     using System.Threading;
-    using Microsoft.Extensions.Logging;
 
     /// <summary>
     /// Binance message processing logging handler.<para/>

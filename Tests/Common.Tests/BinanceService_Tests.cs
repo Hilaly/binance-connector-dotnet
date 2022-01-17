@@ -6,7 +6,6 @@ namespace Binance.Common.Tests
     using System.Net.Http;
     using System.Threading;
     using System.Threading.Tasks;
-    using Microsoft.Extensions.Logging;
     using Moq;
     using Moq.Protected;
     using Xunit;
@@ -158,10 +157,8 @@ namespace Binance.Common.Tests
             mockLogger.Verify(
                 x => x.Log(
                     LogLevel.Information,
-                    It.IsAny<EventId>(),
                     It.IsAny<It.IsAnyType>(),
-                    It.IsAny<Exception>(),
-                    (Func<It.IsAnyType, Exception, string>)It.IsAny<object>()),
+                    It.IsAny<Exception>()),
                 Times.AtLeast(2));
         }
         #endregion
@@ -479,10 +476,8 @@ namespace Binance.Common.Tests
             mockLogger.Verify(
                 x => x.Log(
                     LogLevel.Information,
-                    It.IsAny<EventId>(),
                     It.IsAny<It.IsAnyType>(),
-                    It.IsAny<Exception>(),
-                    (Func<It.IsAnyType, Exception, string>)It.IsAny<object>()),
+                    It.IsAny<Exception>()),
                 Times.AtLeast(2));
         }
         #endregion
